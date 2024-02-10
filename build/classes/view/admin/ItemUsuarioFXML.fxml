@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<HBox alignment="CENTER_LEFT" prefHeight="42.0" prefWidth="684.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.admin.ItemUsuarioFXMLController">
+   <children>
+      <Label fx:id="lblnome" alignment="CENTER" prefHeight="40.0" prefWidth="162.0" text="Nome">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblsobrenome" alignment="CENTER" layoutX="10.0" layoutY="11.0" prefHeight="40.0" prefWidth="162.0" text="Sobrenome">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblusrname" alignment="CENTER" layoutX="172.0" layoutY="11.0" prefHeight="40.0" prefWidth="162.0" text="Nome de Usuário">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblcontacto" alignment="CENTER" layoutX="334.0" layoutY="11.0" prefHeight="40.0" prefWidth="162.0" text="Contacto">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+   </children>
+</HBox>

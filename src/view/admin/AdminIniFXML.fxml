@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="640.0" prefWidth="1100.0" style="-fx-background-color: #fff;" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.admin.AdminIniFXMLController">
+    <stylesheets>
+        <URL value="@admininifxml.css" />
+    </stylesheets>
+   <children>
+      <Pane prefHeight="640.0" prefWidth="216.0" style="-fx-background-color: #424242;">
+         <children>
+            <Button layoutY="139.0" mnemonicParsing="false" onAction="#alterarDenuncia" prefHeight="48.0" prefWidth="216.0" text="Denúncias">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Button>
+            <Button layoutY="188.0" mnemonicParsing="false" onAction="#alteraUtilizadores" prefHeight="48.0" prefWidth="216.0" text="Utilizadores">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Button>
+            <Button layoutY="237.0" mnemonicParsing="false" onAction="#alterarMensagem" prefHeight="48.0" prefWidth="216.0" text="Mensagem">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Button>
+            <Button layoutY="286.0" mnemonicParsing="false" onAction="#terminarSessao" prefHeight="48.0" prefWidth="216.0" text="Terminar Sessão">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
+      <TableView fx:id="tbview" layoutX="240.0" layoutY="140.0" prefHeight="312.0" prefWidth="825.0">
+        <columns>
+          <TableColumn fx:id="lblID" prefWidth="53.0" text="ID" />
+          <TableColumn fx:id="lblNome" prefWidth="72.0" text="Nome" />
+            <TableColumn fx:id="lblSob" prefWidth="93.0" text="Sobrenome" />
+            <TableColumn fx:id="lblusr" prefWidth="122.0" text="Nome De Usuário" />
+            <TableColumn fx:id="lblcontacto" prefWidth="84.0" text="Contacto" />
+            <TableColumn fx:id="lblestado" prefWidth="109.0" text="Estado" />
+            <TableColumn fx:id="lbladicional" minWidth="0.0" prefWidth="53.0" text="Estado" />
+            <TableColumn fx:id="lbladicional1" prefWidth="145.0" text="Estado" />
+        </columns>
+      </TableView>
+      <Button fx:id="btnbloquear" layoutX="925.0" layoutY="104.0" mnemonicParsing="false" onAction="#bloquearUtilizador" prefHeight="25.0" prefWidth="140.0" text="Bloquear" />
+      <Button fx:id="btndesbloquear" layoutX="760.0" layoutY="104.0" mnemonicParsing="false" onAction="#desbloquearUtilizador" prefHeight="25.0" prefWidth="140.0" text="Desbloquear" />
+      <TextField fx:id="txtpesquisa" layoutX="760.0" layoutY="36.0" onAction="#pesquisarUtilizador" prefHeight="25.0" prefWidth="305.0" />
+      <Button fx:id="btnavaliar" layoutX="925.0" layoutY="104.0" mnemonicParsing="false" onAction="#avaliarDenuncia" prefHeight="25.0" prefWidth="140.0" text="Avaliar" />
+      <Button fx:id="btnInvestigar" layoutX="760.0" layoutY="104.0" mnemonicParsing="false" onAction="#investigarDenuncia" prefHeight="25.0" prefWidth="140.0" text="Investigar" />
+      <Button fx:id="btnenviar" layoutX="240.0" layoutY="560.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="120.0" text="Enviar">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <TableView fx:id="tbview1" layoutX="240.0" layoutY="140.0" prefHeight="312.0" prefWidth="825.0" visible="false">
+         <columns>
+            <TableColumn fx:id="lblID1" prefWidth="53.0" text="ID" />
+            <TableColumn fx:id="lblNome1" prefWidth="72.0" text="Nome" />
+            <TableColumn fx:id="lblSob1" prefWidth="93.0" text="Sobrenome" />
+            <TableColumn fx:id="lblusr1" prefWidth="122.0" text="Nome De Usuário" />
+            <TableColumn fx:id="lblcontacto1" prefWidth="29.0" text="Contacto" />
+            <TableColumn fx:id="lblestado1" prefWidth="164.0" text="Estado" />
+            <TableColumn fx:id="lbladicional1" minWidth="0.0" prefWidth="53.0" text="Estado" />
+            <TableColumn fx:id="lbladicional11" prefWidth="145.0" text="Estado" />
+         </columns>
+      </TableView>
+      <Pane fx:id="panedesc" layoutX="240.0" layoutY="460.0" prefHeight="140.0" prefWidth="360.0" style="-fx-background-color: #fff; -fx-border-width: 1px; -fx-border-color: #222222;">
+         <children>
+            <Text fx:id="textlorem" layoutX="6.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="347.0">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+            <TextArea fx:id="txtarea" prefHeight="140.0" prefWidth="360.0" promptText="Mensagem...">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextArea>
+         </children>
+      </Pane>
+      <TableView fx:id="tbview2" layoutX="240.0" layoutY="140.0" prefHeight="312.0" prefWidth="825.0" visible="false">
+         <columns>
+            <TableColumn fx:id="lblID2" prefWidth="91.0" text="Utilizador" />
+            <TableColumn fx:id="lblNome2" prefWidth="112.0" text="Mensagem" />
+            <TableColumn fx:id="lblSob2" prefWidth="99.0" text="Data" />
+            <TableColumn fx:id="lblusr2" prefWidth="112.0" text="Hora" />
+         </columns>
+      </TableView>
+   </children>
+</AnchorPane>
